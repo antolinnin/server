@@ -6,15 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Clonar Repo
-      run: echo Clonado
-    - name: Actualizar Node
-      run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-           nvm install 20 | bash
-           node -v
-           npm -v 
+    - name: Usar la version LTS de node
+      run: echo Hola
     - name: Descargar y logear playit para subir la Web
       run: bash bash.sh
            echo Terminado
-    - name: Sshx
-      run: curl -sSf https://sshx.io/get | sh -s run
+    - name: Ejecutar strapi
+      run: git clone Https://GitHub.com/antolinnn/server
+           echo Por ahora se está usando el repo actual
+    - name: Instalar dependencias
+      run: cd server
+           echo Por ahora no se va a instalar nada
+    - name: Usar sshx
+      run: echo Se va a usar sshx a si que te recomiendo ejecutar el archivo strapi.sh y en otra terminal el archivo playit.sh
