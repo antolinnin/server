@@ -1,0 +1,12 @@
+name: Strapi Host
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Clonar Repo
+      run: echo Clonado
+    - name: Sshx
+      run: curl -sSf https://sshx.io/get | sh -s run
